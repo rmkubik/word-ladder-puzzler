@@ -44,7 +44,7 @@ const Rung = ({
         onFocus={onFocus}
         wordLength={wordLength}
       />
-      <Status>{correct ? "✅" : ""}</Status>
+      <Status>{correct ? "✔" : ""}</Status>
     </>
   );
 };

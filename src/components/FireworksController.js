@@ -28,6 +28,8 @@ const FireworksController = ({ emit }) => {
         },
         speed: 10,
         autoresize: true,
+        hue: { min: 226, max: 226 },
+        brightness: { min: 20, max: 20 },
       });
 
       setFireworks(fireworks);

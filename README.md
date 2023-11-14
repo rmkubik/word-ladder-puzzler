@@ -1,8 +1,6 @@
-# Portland Word Ladder
+# Puzzler Word Ladder
 
-This repository was created for fun after I played a word ladder someone else made. I authored it on paper as a way to get away from screens while making games. I couldn't help myself though, so now it's a web app!
-
-🪜 [Climb the ladder](https://pdx-word-ladder.netlify.app/)
+This is another iteration of my older [Portland Word Ladder](https://pdx-word-ladder.netlify.app/) done for [Confounding Calendar 2023](https://confoundingcalendar.itch.io/). This one is puzzle game themed.
 
 ## Build your own
 

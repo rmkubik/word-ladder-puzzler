@@ -7,12 +7,13 @@ import settings from "../data/settings.yaml";
 import useHotKeys from "./hooks/useHotKeys";
 import useAnswers from "./hooks/useAnswers";
 
-import GlobalStyle from "./components/GlobalStyle";
+import GlobalStyle from "./styles/GlobalStyle";
 import FireworksController from "./components/FireworksController";
 import Ladder from "./components/Ladder";
 import Rung from "./components/Rung";
 
 import { getMaxWordLength, parseLadderData } from "./utils";
+import withThemeProvider from "./styles/withThemeProvider";
 
 const App = () => {
   const [ladder] = useState(parseLadderData(ladderData));
@@ -55,13 +56,21 @@ const App = () => {
     <div>
       <FireworksController emit={areAllAnswersCompleted()} />
       <GlobalStyle />
-      <h1>{settings.title}</h1>
-      <h2>The Rules</h2>
-      <p>{settings.rules}</p>
-      <h3>For Example:</h3>
-      <pre>{settings.example}</pre>
-      <p></p>
-      <h2>The Ladder</h2>
+      {settings.title ? <h1>{settings.title}</h1> : null}
+      {settings.rules ? (
+        <>
+          <h2>The Rules</h2>
+          <p>{settings.rules}</p>
+        </>
+      ) : null}
+      {settings.example ? (
+        <>
+          <h3>For Example:</h3>
+          <pre>{settings.example}</pre>
+          <p></p>
+        </>
+      ) : null}
+      {settings.showLadderLabel ? <h2>The Ladder</h2> : null}
       <Ladder wordLength={wordLength}>
         {ladder.map(({ clue, answer }, index) => (
           <Rung
@@ -81,10 +90,14 @@ const App = () => {
           />
         ))}
       </Ladder>
-      <a href={settings.closingLink.link}>{settings.closingLink.label}</a>
+      {settings.closingLink ? (
+        <a href={settings.closingLink.link}>{settings.closingLink.label}</a>
+      ) : null}
     </div>
   );
 };
 
+const ThemedApp = withThemeProvider(App);
+
 const root = document.getElementById("root");
-ReactDOM.render(<App />, root);
+ReactDOM.render(<ThemedApp />, root);
