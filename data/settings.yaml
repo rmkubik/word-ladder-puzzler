@@ -1,5 +1,6 @@
 title: false
 rules: false
 example: false
-showLadderTitle: false
+showLadderLabel: false
 closingLink: false
+centerGame: true

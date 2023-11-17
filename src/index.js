@@ -53,7 +53,16 @@ const App = () => {
   const wordLength = getMaxWordLength(ladder);
 
   return (
-    <div>
+    <div
+      style={
+        settings.centerGame
+          ? {
+              display: "flex",
+              justifyContent: "center",
+            }
+          : {}
+      }
+    >
       <FireworksController emit={areAllAnswersCompleted()} />
       <GlobalStyle />
       {settings.title ? <h1>{settings.title}</h1> : null}
