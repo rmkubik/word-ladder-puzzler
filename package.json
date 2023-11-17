@@ -1,6 +1,6 @@
 {
-  "name": "word-ladder",
-  "version": "1.0.0",
+  "name": "puzzling-word-ladder",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -15,7 +15,9 @@
   },
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html --public-url='.'",
+    "deploy": "npm run build && npm run deploy:itch",
+    "deploy:itch": "butler push dist rmkubik/puzzling-word-ladder:html"
   },
   "author": "",
   "license": "ISC"
