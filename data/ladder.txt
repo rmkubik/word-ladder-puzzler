@@ -9,13 +9,13 @@ GOLD The color of a particular Idol
 GOOD It's Hard To Build one of these Snowmen!
 FOOD 20th Century ____ Court
 WOOD Perfect kindling for a Bonfire
-WORD You only have six guesses to get this one
+WORD Follows Cross and precedes LE
 WARD Up, Down, Back, For 
-BARD Someone needs to inspire the party
-BIRD It's not quite a Snake!
+BARD Someone to inspire the party
+BIRD It's not just a Snake!
 BIND Myst's protagonist is in one
 KIND Baba is one of a ____
-KINE A three piece band
+KINE A puzzler with a three piece band
 MINE The object of the classic Sweeping game
 LINE The Witness is full of these
 DINE To Eat
